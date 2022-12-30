@@ -23,7 +23,7 @@ function printSbtTask(task) {
   if (result.status !== 0)
     throw new Error(`sbt process failed with exit code ${result.status}`);
   const results = result.stdout.toString('utf8').trim();
-  console.log('"', results, '"');
+  console.log(`got from SBT trimmed: "${results}"`);
   return results;
 }
 
