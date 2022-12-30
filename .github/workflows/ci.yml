@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - name: Build
-        run: sbt fullLinkJS && npm install && npm run build
+        run: sbt fullLinkJS && ls -R target/scala-3.2.1/laminar-static-opt && npm install && npm run build
       - name: Publish gh-pages
         uses: peaceiris/actions-gh-pages@v3
         if: startsWith(github.ref, 'refs/tags/v') || (github.ref == 'refs/heads/master')
