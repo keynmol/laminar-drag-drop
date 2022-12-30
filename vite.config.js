@@ -22,7 +22,7 @@ function printSbtTask(task) {
     throw result.error;
   if (result.status !== 0)
     throw new Error(`sbt process failed with exit code ${result.status}`);
-  const results = result.stdout.toString('utf8').trim();
+  const results = result.stdout.toString('utf8').replace(/(\r\n|\n|\r)/gm, "");
   console.log(`got from SBT trimmed: "${results}"`);
   return results;
 }
