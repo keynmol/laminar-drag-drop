@@ -1,0 +1,43 @@
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#facade {
+  text-align: center;
+}
+
+.drop-zone-container{
+  display:flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: center;
+  column-gap: 20px;
+  width: 80%;
+}
+
+.drop-zone {
+  padding: 20px;
+  border: 3px solid grey;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.drop-zone-over {
+  border: 3px dashed red;
+}
+
+.bull-image {
+  width: 100px;
+  margin: 1px;
+}
+
+.bull-image-dragged {
+  border:1px solid red;
+}
+

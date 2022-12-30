@@ -1,4 +1,4 @@
-scalaVersion := "2.13.4"
+scalaVersion := "3.2.1"
 
 enablePlugins(ScalaJSPlugin)
 

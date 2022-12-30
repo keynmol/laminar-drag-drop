@@ -6,3 +6,6 @@ project/project
 metals.sbt
 .vscode
 .bsp
+node_modules
+.DS_Store
+dist
