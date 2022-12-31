@@ -1,14 +1,11 @@
-# laminar-static-gh-pages
+# Laminar drag & drop demo
 
-This is a very simple template
+This a demo of implementing a drag and drop functionality with [Laminar](https://laminar.dev), a [Scala.js](https://scala-js.org) frontend library.
 
-1. Uses Laminar
-2. Contains two HTML files (that reference results of Scala.js compilation)
-3. Uses Github Actions to publish those two html files + **results of Scala.js** into Github Pages
+See demo here: https://laminar-drag-drop.surge.sh/
 
-So basically a "static site laminar example"
+### Dev notes
 
-This repo itself publishes to gh pages over here: 
-
-1. Non-optimised JS http://blog.indoorvivants.com/laminar-static-gh-pages/index-dev.html
-2. Fully optimised JS: http://blog.indoorvivants.com/laminar-static-gh-pages/index-prod.html
+1. In one terminal run `sbt ~fastLinkJS` - this will continuously rebuild the Scala.js 
+   output
+2. In another terminal run `npm install` (only once) and then `npm run dev` - this will open Vite's preview server, which will automatically reload when you make any changes.

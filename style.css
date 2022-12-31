@@ -1,11 +1,31 @@
-
-#app {
+body,html{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font-size:1.2rem;
   color: #2c3e50;
+}
+
+a {
+  color: darkblue;
+  text-decoration-color: maroon;
+  text-decoration-thickness: .125em;
+  text-underline-offset: 1.5px;
+}
+
+a:hover {
+  text-decoration-thickness: 0px;
+}
+
+a:visited {
+  color: darkblue;
+}
+
+#app {
   margin-top: 60px;
+  width:80%;
+  margin-left:auto;
 }
 
 #facade {
