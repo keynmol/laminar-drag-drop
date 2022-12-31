@@ -7,7 +7,7 @@ import com.raquo.laminar.api.L.*
 
 trait Draggable[T]:
   def events: EventStream[DraggableState[T]]
-  def binders: Seq[Modifier[Element]]
+  def binders: Seq[Modifier[HtmlElement]]
 
   def isDragged: Signal[Boolean] =
     events
@@ -26,7 +26,8 @@ object Draggable:
     ) =
       ev.mapToStrict(value) --> kind.someWriter
 
-    val b = Seq[Mod[Element]](
+    val b = Seq[Mod[HtmlElement]](
+      draggable := true,
       bind(
         onDragStart.map { ev =>
           ev.dataTransfer.setData("text/plain", serialised.string)
@@ -40,7 +41,7 @@ object Draggable:
     )
 
     new Draggable[T]:
-      override def binders: Seq[Mod[Element]] = b
+      override def binders: Seq[Mod[HtmlElement]] = b
       override def events: EventStream[DraggableState[T]] =
         kind.signal.changes.collect { case Some(k) =>
           DraggableState(serialised, k)
@@ -48,5 +49,6 @@ object Draggable:
     end new
   end apply
 
-  def string(value: String): Draggable[String] = apply(value)(identity, identity)
+  def string(value: String): Draggable[String] =
+    apply(value)(identity, identity)
 end Draggable

@@ -11,7 +11,6 @@ object Example:
       val drag = dragDrop.draggable(title)
       p(
         img(
-          draggable := true,
           src       := "bull-svgrepo-com.svg",
           cls       := "bull-image",
           // add event binders
