@@ -33,9 +33,10 @@ const replacementForPublic = isDev()
 
 export default defineConfig({
   resolve: {
+    preserveSymlinks: true,
     alias: [
       {
-        find: "@public",
+        find: "/generated-public",
         replacement: replacementForPublic,
       },
     ],

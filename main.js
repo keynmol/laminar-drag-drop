@@ -1,2 +1,2 @@
 import './style.css'
-import '@public/main.js'
+import '/generated-public/main.js'
